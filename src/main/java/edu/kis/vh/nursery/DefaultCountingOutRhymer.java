@@ -3,11 +3,11 @@ package edu.kis.vh.nursery;
 public class DefaultCountingOutRhymer {
 
 	public final int MAX_SIZE = 12;
-	public final int FULL = SIZE-1;
+	public final int FULL = MAX_SIZE-1;
 	public final int INITIAL = -1;
 	public final int DEFAULT = -1;
 
-	private final int[] numbers = new int[SIZE];
+	private final int[] numbers = new int[MAX_SIZE];
 	private int total = INITIAL;
 
 	public void countIn(int in) {
