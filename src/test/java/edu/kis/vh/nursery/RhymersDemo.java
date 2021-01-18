@@ -6,9 +6,11 @@ import edu.kis.vh.nursery.factory.Rhymersfactory;
 class RhymersDemo {
 	public static void main(String[] args) {
 		Rhymersfactory factory = new DefaultRhymersFactory();
-
+		testRhymers(factory);
+	}
+	static void testRhymers(Rhymersfactory factory){
 		DefaultCountingOutRhymer[] rhymers = { factory.getStandardRhymer(), factory.getFalseRhymer(),
-				factory.getFIFORhymer(), factory.getHanoiRhymer() };
+			factory.getFIFORhymer(), factory.getHanoiRhymer() };
 
 		for (int i = 1; i < 15; i++)
 			for (int j = 0; j < 3; j++)
@@ -23,7 +25,7 @@ class RhymersDemo {
 				System.out.print(rhymers[i].countOut() + "  ");
 			System.out.println();
 		}
-
 		System.out.println("Total rejected is " + ((HanoiRhymer) rhymers[3]).reportRejected());
+
 	}
 }
