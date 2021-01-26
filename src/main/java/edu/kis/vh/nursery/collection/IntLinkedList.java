@@ -2,7 +2,7 @@ package edu.kis.vh.nursery.collection;
 
 public class IntLinkedList implements IntCollection{
 
-	final int RETURN_VALUE = -1;
+	final int RETURN_VALUE = 0;
 	private Node last;
 	private int listSize = 0;
 
