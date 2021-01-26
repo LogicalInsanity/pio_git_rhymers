@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery.collection;
 
-public class IntArrayStack {
+public class IntArrayStack implements IntCollection{
 
 	public final int MAX_SIZE = 12;
 	public final int FULL = MAX_SIZE-1;
@@ -36,5 +36,21 @@ public class IntArrayStack {
 	}
 	public int getTotal() {
 		return total;
+	}
+
+	public int pop() {
+		return countOut();
+	}
+	public void push(int val) {
+		countIn(val);
+	}
+	public int top() {
+		return peekaboo();
+	}
+	public int size() {
+		return total;
+	}
+	public boolean isEmpty() {
+		return callCheck();
 	}
 }

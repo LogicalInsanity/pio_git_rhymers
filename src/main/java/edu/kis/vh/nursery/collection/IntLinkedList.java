@@ -1,11 +1,13 @@
 package edu.kis.vh.nursery.collection;
 
-public class IntLinkedList {
+public class IntLinkedList implements IntCollection{
 
 	final int RETURN_VALUE = -1;
-	 private Node last;
+	private Node last;
+	private int listSize = 0;
 
 	public void push(int i) {
+		listSize++;
 		if (last == null) last = new Node(i);
 		else {
 			last.next = new Node(i);
@@ -33,6 +35,11 @@ public class IntLinkedList {
 			return RETURN_VALUE;
 		int ret = last.getValue();
 		last = last.prev;
+		listSize--;
 		return ret;
+	}
+
+	public int size() {
+		return listSize;
 	}
 }
